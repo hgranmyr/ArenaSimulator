@@ -12,5 +12,6 @@ namespace ArenaSimulator
         public int Health { get; set; }
         public int Power { get; set; }
 
+        public Character(string Name, int Health, int Power);
     }
 }

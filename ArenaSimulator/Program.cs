@@ -31,6 +31,7 @@ namespace ArenaSimulator
                 switch (selection)
                 {
                     case 1:
+                        gladiators.Add(CreateCharacter());
                         break;
                     case 2:
                         break;
@@ -51,12 +52,14 @@ namespace ArenaSimulator
                 Console.Clear();
             }
 
-            static Character CreateCharacter()
+            Character CreateCharacter()
             {
                 Console.WriteLine("Enter a name for your gladiator: ");
                 string name = (Console.ReadLine());
-                int health = 10;
-                int power = 
+                Console.WriteLine("Assign a health value");
+                int health = int.Parse(Console.ReadLine());
+                int power = 0;
+                return new Character(name, health, power);
             }
         }
     }
